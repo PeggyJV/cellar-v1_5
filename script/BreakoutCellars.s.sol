@@ -6,6 +6,12 @@ import { Registry } from "src/Registry.sol";
 import { Cellar } from "src/base/Cellar.sol";
 import { ERC20 } from "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
+/**
+ * @dev Run
+ *      `source .env && forge script script/BreakoutCellars.s.sol:BreakoutCellarsScript --rpc-url $MAINNET_RPC_URL  --private-key $PRIVATE_KEY --broadcast —optimize —optimizer-runs 200 --with-gas-price 20000000000 --verify --etherscan-api-key $ETHERSCAN_KEY`
+ * @dev Optionally can change `--with-gas-price` to something more reasonable
+ */
+
 contract BreakoutCellarsScript is Script {
     address private sommMultiSig = 0x7340D1FeCD4B64A4ac34f826B21c945d44d7407F;
     address private strategist = 0x13FBB7e817e5347ce4ae39c3dff1E6705746DCdC;
